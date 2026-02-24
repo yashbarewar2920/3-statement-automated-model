@@ -1,32 +1,28 @@
-Tata Motors 3-Statement Financial Model (2016-2025)
-Project Overview
-This repository contains a fully dynamic, 10-year historical and projected financial model for Tata Motors Limited. The model integrates the three core financial statements—Income Statement, Balance Sheet, and Cash Flow Statement—ensuring that all accounting linkages are maintained automatically.
+Automated 3-Statement Model: Tata Motors (2016-2025)
+Executive Summary
+This project is a comprehensive financial reconstruction of Tata Motors Passenger Vehicles Ltd. It transforms raw financial exports into a professional-grade, interlinked 3-statement model. The architecture is designed to handle 10 years of historical data while allowing for real-time scenario testing through dynamic forecasting.
 
-The goal of this project was to bridge the gap between raw financial data and actionable equity research analysis by building a scalable Excel framework.
+Technical Highlights
+Robust Data Plumbing: Built a dedicated 'Data Sheet' that acts as a central repository. I used SUMIF and IFERROR logic to automate the flow of raw data into the Financial Statements, eliminating manual entry errors.
 
-Data Source & Architecture
-Primary Source: Historical data (FY2016 - FY2025) sourced from Screener.in.
+Interlinked Logic: * Income Statement: Tracks the journey from Sales (₹2.73L Cr in 2016 to ₹4.39L Cr in 2025) down to PAT.
 
-Data Plumbing: Built a dedicated "Data Sheet" to house raw exports. I used SUMIF and IFERROR formulas to map raw line items to the main financial statements. This ensures that the model remains "break-proof" even if the raw data structure changes slightly.
+Balance Sheet: Fully balanced 10-year historical record (2016-2025).
 
-Standardization: Cleaned and reclassified various "Other" line items to ensure the Balance Sheet balances and the Cash Flow Statement accurately reflects the indirect method.
+Cash Flow Statement: Built using the indirect method, reconciling operational cash flow (which reached a peak of ₹67,915 Cr in 2024).
 
-Key Features
-10-Year Depth: Provides a decade of historical context to identify long-term margin trends and capital allocation patterns.
+Dynamic Forecasting: The model supports forecasting via both absolute amount inputs and YoY percentage growth drivers.
 
-Dynamic Projections: Forecasting is driven by both absolute sales amounts and percentage growth assumptions.
+Key Data Insights Captured
+Revenue Volatility: Captured the -13.5% dip in 2020 and the massive 24.2% recovery in 2023.
 
-Interlinked Statements: * Net Income flows from the P&L to Retained Earnings on the Balance Sheet.
+Expense Analysis: Granular tracking of Raw Material Costs and Employee Benefit Expenses across a decade.
 
-The Cash Flow Statement (Indirect Method) reconciles Net Income to the Ending Cash Balance.
+Asset Management: Detailed historical view of Inventory and Receivables trends relative to Sales growth.
 
-The Ending Cash Balance links back to the Balance Sheet, completing the circular logic.
+How to Audit the Model
+Inputs: All assumptions are clearly highlighted in Blue as per industry standards.
 
-Visual Formatting: Applied institutional formatting standards. Key line items (EBITDA, Net Profit, Total Assets) are highlighted for quick readability.
+Mapping: Check the Financials sheet to see how SUMIF pulls data dynamically from the Data Sheet.
 
-How to Use the Model
-Assumptions: Go to the main sheet and look for cells formatted in Blue (Standard finance practice for inputs).
-
-Scenario Analysis: Change the Sales Growth % or Expense Margins to see the real-time impact on the projected Cash Flow and Balance Sheet health.
-
-Audit: You can trace any number back to the "Data Sheet" to see exactly how the SUMIF logic aggregates the raw numbers.
+Integrity: The model includes a "Check" line to ensure the Balance Sheet always equates to zero (Assets - Liabilities - Equity = 0).
